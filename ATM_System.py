@@ -1,7 +1,11 @@
 class ATM:
+    # static variable...
+    counter=1
     def __init__(self):
         self.__pin=0
         self.__balance=0
+        self.id=ATM.counter #whenever we wnat to use the static variable we use the class name
+        ATM.counter=ATM.counter+1
         # print("Hello I am constructor")
         self.menu()
     def get_pin(self):
